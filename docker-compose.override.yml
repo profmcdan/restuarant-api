@@ -16,8 +16,8 @@ services:
     container_name: portainer
     restart: always
     ports:
-      - 8080:8000
-      - 9090:9000
+      - "8080:8000"
+      - "9090:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
@@ -26,13 +26,11 @@ services:
     container_name: mango.services.productapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "DatabaseSettings:ConnectionString=Server=productdb;Port=1433;Database=ProductDB;User Id=sa;Password=admin!234;"
+      - "ConnectionStrings:DefaultConnection=Server=productdb,1433;Database=ProductDB;Trusted_Connection=false;MultipleActiveResultSets=true;User Id=sa;Password=admin!234;"
     ports:
       - "8001:80"
-      - "9001:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     depends_on:
       - productdb
-
