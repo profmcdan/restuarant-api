@@ -52,6 +52,8 @@ namespace Mango.Services.ProductAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mango Product API"));
 
             app.UseHttpsRedirection();

@@ -21,13 +21,12 @@ namespace Mango.Services.ProductAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<object> Get()
+        public async Task<object> GetProducts()
         {
             try
             {
                 IEnumerable<ProductDto> products = await _productRepository.GetProducts();
                 _response.Result = products;
-                return Ok();
             }
             catch (Exception e)
             {
@@ -46,7 +45,6 @@ namespace Mango.Services.ProductAPI.Controllers
             {
                 ProductDto product = await _productRepository.GetProductById(id);
                 _response.Result = product;
-                return Ok();
             }
             catch (Exception e)
             {
@@ -54,7 +52,7 @@ namespace Mango.Services.ProductAPI.Controllers
                 _response.ErrorMessages = new List<string>() { e.ToString() };
             }
 
-            return _response;
+            return Ok(_response);
         }
         
         [HttpPost]
@@ -64,7 +62,6 @@ namespace Mango.Services.ProductAPI.Controllers
             {
                 ProductDto product = await _productRepository.CreateProduct(newProduct);
                 _response.Result = product;
-                return Ok();
             }
             catch (Exception e)
             {
@@ -95,7 +92,7 @@ namespace Mango.Services.ProductAPI.Controllers
                 _response.ErrorMessages = new List<string>() { e.ToString() };
             }
 
-            return Ok(_response);
+            return _response;
         }
         
         [HttpDelete]
@@ -107,7 +104,6 @@ namespace Mango.Services.ProductAPI.Controllers
                 
                 // ReSharper disable once HeapView.BoxingAllocation
                 _response.Result = isDeleted;
-                return Ok(_response);
             }
             catch (Exception e)
             {
