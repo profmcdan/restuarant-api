@@ -8,12 +8,25 @@ services:
     image: portainer/portainer-ce
   
   mango.services.productapi:
-    image: ${DOCKER_REGISTRY-}mangoservices
+    image: ${DOCKER_REGISTRY-}productapi
     build:
       context: .
       dockerfile: Mango.Services.ProductAPI/Dockerfile
 
 
+  mango.services.authapi:
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: .
+      dockerfile: Mango.Services.AuthAPI/Dockerfile
+
+  mango.apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: Mango.ApiGateway/Dockerfile
+
 volumes:
   mssql_volume:
   portainer_data:
+

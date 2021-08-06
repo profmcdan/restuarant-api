@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.ProductAPI",
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D72FCF54-3DBC-4EF1-A4F4-38358CB5D153}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{5971CD00-7A70-484A-A6DA-F804021B07C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{36882651-C5D5-4C3B-AB87-F5498FDAA4C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.ApiGateway", "Mango.ApiGateway\Mango.ApiGateway.csproj", "{25695D05-465E-4288-9BDE-8DAF19636DEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,14 @@ Global
 		{D72FCF54-3DBC-4EF1-A4F4-38358CB5D153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72FCF54-3DBC-4EF1-A4F4-38358CB5D153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72FCF54-3DBC-4EF1-A4F4-38358CB5D153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5971CD00-7A70-484A-A6DA-F804021B07C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5971CD00-7A70-484A-A6DA-F804021B07C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5971CD00-7A70-484A-A6DA-F804021B07C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5971CD00-7A70-484A-A6DA-F804021B07C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25695D05-465E-4288-9BDE-8DAF19636DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25695D05-465E-4288-9BDE-8DAF19636DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25695D05-465E-4288-9BDE-8DAF19636DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25695D05-465E-4288-9BDE-8DAF19636DEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +55,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BFFA4DEB-8E6B-45A4-86CC-D5CEF15872A0} = {90A78BCE-5E4E-45A6-B3F7-594C3F50A641}
 		{47F74E41-C791-45C0-8E2B-ED094111E077} = {33E939C8-F07B-4BF2-A2F1-3FFEB3175AC7}
+		{5971CD00-7A70-484A-A6DA-F804021B07C0} = {33E939C8-F07B-4BF2-A2F1-3FFEB3175AC7}
+		{25695D05-465E-4288-9BDE-8DAF19636DEC} = {36882651-C5D5-4C3B-AB87-F5498FDAA4C7}
 	EndGlobalSection
 EndGlobal
