@@ -20,11 +20,11 @@ services:
       context: .
       dockerfile: Mango.Services.AuthAPI/Dockerfile
 
-  mango.apigateway:
-    image: ${DOCKER_REGISTRY-}apigateway
+  envoy:
+    image: ${DOCKER_REGISTRY-}envoy
     build:
       context: .
-      dockerfile: Mango.ApiGateway/Dockerfile
+      dockerfile: ./Envoy/Dockerfile
 
 volumes:
   mssql_volume:

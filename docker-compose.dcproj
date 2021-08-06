@@ -15,4 +15,11 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Envoy\Dockerfile" />
+    <Content Include="Envoy\entrypoint.sh" />
+    <Content Include="Envoy\envoy.old.yaml" />
+    <Content Include="Envoy\envoy.yml" />
+    <Content Include="Envoy\envoy_with_tls.yml" />
+  </ItemGroup>
 </Project>
